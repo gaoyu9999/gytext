@@ -1,0 +1,141 @@
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<title>Document</title>
+		<meta name="viewport" content="width=device-width,initial-scale=1">
+		<link rel="stylesheet" href="css/bootstrap.css">
+		<script src="js/jquery.min.js"></script>
+		<script src="js/popper.min.js"></script>
+		<script src="js/bootstrap.min.js"></script>
+		<style type="text/css">
+			@media (max-width:1020px) {
+				/* #left{margin-top: 2%;} */
+				#left>div:nth-child(2)>div>ul{display: flex;}
+				#left>div:nth-child(2)>div>ul>li{margin-left: 10px;}
+			}
+			.un-line {
+				border-bottom: 3px solid green;
+				
+			}
+			@media (min-width:972px) {
+				.big {
+					margin-top: 40%;
+					margin-left: 20%;
+				}
+			}
+			.font-sm {
+				font-size: 16px !important;
+			}
+			/* 按钮btn样式 */
+			.btn {
+				border: 1px solid #00A862;
+				color: #00A862;
+				border-radius: 48px;
+				box-sizing: border-box;
+				font-weight: 500;
+				/* transition-property: background, border-color, color; */
+				outline: none;
+				padding: 6px 18px;
+			}
+			
+			.btn:hover {
+				color: #00A862;
+			}
+			#last1{
+				background: url(img/bj999.png) ;
+				height: 300px;
+			}
+			#last1>div{margin-left: 10%;margin-top: 8%;}
+		</style>
+	</head>
+	<body>
+		<div class="container-fluid">
+			<div class="row">
+				<!-- left -->
+				<div id="left" class="col-lg-3 col-sm-12  mb-4">
+					<div class="row d-flex flex-nowrap justify-content-between">
+						<div class="mt-4 ml-3">
+							<a href="index.html"><img src="img/logo.svg" width="36px" height="36px"></a>
+							<a href="#" class="text-dark ml-3 mt-2 font-weight-bold">门店</a>
+							<a href="#" class="text-dark ml-3 mt-2 font-weight-bold">我的账户</a>
+							<a href="list.html" class="text-dark ml-3 mt-2 font-weight-bold">菜单</a>
+						</div>
+						<div class="mt-4">
+							<button class="btn btn-light border-0"><img src="img/top-buttom.svg"></button>
+						</div>
+					</div>
+					<div class="row mt-5">
+						<div class="big">
+							<h4 class="font-weight-bold">登录或创建一个新帐户 🌟</h4>
+							<ul class="list-unstyled">
+								<li class="text-dark font-weight-bold mt-2 ">登录</li>
+								<!-- <hr style="width: 20px; color: #008000;border: 1px solid;float: left;">br -->
+								<li class="text-muted mt-2">注册</li>
+								<li class="text-muted mt-2">关于星享俱乐部</li>
+								
+							</ul>
+						</div>
+					</div>
+				</div>
+				<!-- right -->
+				<div id="right" class="col-lg-9 col-sm-12">
+					<div class="row">
+						<div class="col-sm-12">
+							<img src="img/bj1.jpg" height="500px" width="100%">
+						</div>
+						<!-- login -->
+						<div class="col-sm-12">
+							<div class="row">
+								<div class="col-sm-12 mt-3">
+									<a href="" class="float-right"><img src="img/2wm.png" ></a>
+									<div class="w-50 m-auto border-bottom " >
+										<p class="text-muted p-2">用户名或者电子邮箱</p> 
+									</div>
+									<div class="w-50 m-auto border-bottom " >
+										<p class="text-muted p-2">密码</p> 
+									</div>
+									<div class="w-50 m-auto">
+										<div class="row mt-3">
+											<div class="col-sm-6">
+												<input type="checkbox" class="" />下次自动登陆   
+											</div>
+											<div class="col-sm-6 text-right">
+												<a href="#" style="color: #008000;">忘记密码?</a>
+											</div>
+										</div>  
+									</div>
+									<div class="w-50 m-auto">
+										<div class="row d-flex w-80 m-auto justify-content-between">
+											<span class="text-dark font-sm mt-3">
+												滑动下方滑块完成拼图
+											</span>
+											<span class="text-muted mt-3">反馈 &nbsp;&nbsp;刷新</span><br>
+		
+										</div>
+										<img src="img/2wmbig.png" class="ml-5 "><br>
+										<img src="img/2wm3.png" class="mt-2 ml-5">
+									</div>
+									
+								</div>
+							</div>
+						</div>
+						<!-- bottom -->
+						<div id="last1" class="col-sm-12 text-white ">
+							<div class="row">
+								<div class="col-sm-12">
+									<h5 class="mb-">加入星享俱乐部</h5>
+								</div>
+								<div class="col-sm-12">
+									<h5 >只需几分钟，便可成功注册星享俱乐部帐户，成为“星”会员，立即开启集星之旅。</h5>
+								</div>
+								
+								<a href="#" class="btn mt-3">注册</a>
+							</div>
+						</div>
+					</div>
+				</div>
+				
+			</div>
+		</div>
+	</body>
+</html>

@@ -1,0 +1,364 @@
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<title>Document</title>
+		<meta name="viewport" content="width=device-width,initial-scale=1">
+		<link rel="stylesheet" href="css/bootstrap.css">
+		<script src="js/jquery.min.js"></script>
+		<script src="js/popper.min.js"></script>
+		<script src="js/bootstrap.min.js"></script>
+		<style type="text/css">
+			.lbt>img:first-child {
+				z-index: 0
+			}
+
+			.lbt>img:last-child {
+				z-index: 0
+			}
+
+
+			/* 轮播图按钮 */
+			#right {
+				position: absolute;
+				right: 30px;
+				top: 270px;
+				z-index: 999;
+				transition: transform 0.3s;
+			}
+
+			#right:hover {
+				transform: translate(10px);
+			}
+
+			/*轮播图盒子  */
+			.lbt {
+				position: relative;
+			}
+
+			.lbt>img {
+				position: absolute;
+				left: 0;
+				top: 0;
+			}
+
+			/* icon */
+			#icon div>img {
+				width: 100%;
+				transition: all 0.4s;
+			}
+
+			#icon div>img:hover {
+				transform: translatey(-10px);
+			}
+
+			/* 前面格式不更改，影响轮播图sheets */
+			/*文本 rest */
+			.text-or {
+				color: #C2A661;
+			}
+
+			.font-sm {
+				font-size: 16px !important;
+			}
+
+			/* 重置背景灰色 */
+			.bg-gray {
+				background-color: #e8e8e8 !important;
+			}
+
+			/* a标签重置 */
+			.a-reset {
+				text-decoration: none;
+				color: white;
+			}
+
+			.a-reset:hover {
+				text-decoration: none;
+				color: white;
+			}
+
+			/* 宽度重置 */
+			.w-20 {
+				width: 20% !important;
+			}
+
+			.w-60 {
+				width: 60%;
+			}
+
+			.ml-10 {
+				margin-left: 10%;
+			}
+
+			.w-288 {
+				width: 288px;
+			}
+
+			/* 高度重置 */
+			.h999 {
+				height: 657px;
+			}
+
+			.h255 {
+				height: 255px;
+			}
+
+			.h247 {
+				height: 247px;
+			}
+
+			.h196 {
+				height: 196px;
+			}
+
+			/* 按钮btn样式 */
+			.btn {
+				border: 1px solid #00A862;
+				color: #00A862;
+				border-radius: 48px;
+				box-sizing: border-box;
+				font-weight: 500;
+				/* transition-property: background, border-color, color; */
+				outline: none;
+				padding: 6px 18px;
+			}
+
+			.btn:hover {
+				color: #00A862;
+			}
+
+			/* 辛巴克精选图片重置样式 */
+			.tupianbaba {
+				position: relative;
+			}
+
+			.tupian {
+				display: block;
+				position: relative;
+				top: -30px;
+				left: 20%;
+			}
+
+			.tupian2 {
+				display: block;
+				position: relative;
+				top: -30px;
+				left: 20%;
+			}
+
+			#group>li {
+				transition: all 0.2s;
+			}
+
+			#group>li:hover {
+				transform: translateY(-10px);
+				box-shadow: 0 0 0 3px gainsboro;
+			}
+
+			/* foot */
+			#foot img {
+				width: 100%;
+			}
+
+			#foot>div div {
+				transition: all 0.2s;
+				border: 1px solid gainsboro;
+				box-shadow: 0px 0px 3px 1px gainsboro;
+			}
+
+			#foot>div div:hover {
+				transform: translatey(-10px);
+			}
+
+			/* 媒体查询 */
+			@media (min-width:972px) {
+				.big {
+					margin-top: 40%;
+					margin-left: 20%;
+				}
+			}
+			@media (max-width:1060px) {
+				#group{width: 100%;
+				
+				}
+				#group>li:nth-child(3),#group>li:nth-child(4){
+					margin-top: 10px;
+				}
+				#group>li>a>img{
+					left: 40%;
+				}
+			}
+			@media (max-width:576px) {
+				.col-sm-img{
+					width: 100%;
+					display: block;
+				}
+			}
+		</style>
+		<script type="text/javascript">
+			var a = document.styleSheets[1].rules;
+			var b = a[1].style.zIndex;
+			// 点击下一张图片；
+			function next() {
+				// console.log(11)
+				var c = b;
+				if (c == 1) {
+					a[1].style.zIndex = 0;
+					b = 0
+				}
+				if (c == 0) {
+					a[1].style.zIndex = 1;
+					b = 1
+				}
+			}
+			// 定时器自动播放
+			setInterval(next, 3000)
+		</script>
+	</head>
+	<body>
+		<div class="container-fluid">
+			<div class="row ">
+				<!-- left -->
+				<div class="col-lg-3 col-sm-12  mb-4">
+					<div class="row d-flex flex-nowrap justify-content-between">
+						<div class="mt-4 ml-3">
+							<img src="img/logo.svg" width="36px" height="36px">
+							<a href="#" class="text-dark ml-3 mt-2 font-weight-bold">门店</a>
+							<a href="zhanghu.html" class="text-dark ml-3 mt-2 font-weight-bold">我的账户</a>
+							<a href="list.html" class="text-dark ml-3 mt-2 font-weight-bold">菜单</a>
+						</div>
+						<div class="mt-4">
+							<button class="btn btn-light border-0"><img src="img/top-buttom.svg"></button>
+						</div>
+					</div>
+					<div class="row mt-5">
+						<div class="big">
+							<h5 class="mb-4">心情惬意，来杯咖啡吧☕</h5>
+							<img class="ml-10 " src="img/left.svg"><a href="#" class="btn border-0">登录</a><a href="#" class="btn">注册</a>
+						</div>
+					</div>
+				</div>
+				<!-- right -->
+				<div class="col-lg-9 col-sm-12 ">
+					<!-- 轮播图 -->
+					<div class="row h999">
+						<div class="lbt">
+							<img src="img/bj1.jpg" id="bg1" style="z-index: 1;">
+							<img src="img/bj2.jpg" id="bj2">
+						</div>
+						<button onclick="next()"> <img src="./img/btn1.svg" class="d-block" id="right"></button>
+					</div>
+					<!-- icon -->
+					<div id="icon" class="row bg-gray">
+						<div class="col-sm-4  p-3">
+							<img src="img/icon1.jpg" class="rounded">
+						</div>
+						<div class="col-sm-4  p-3">
+							<img src="img/icon2.jpg" class="rounded">
+						</div>
+						<div class="col-sm-4  p-3">
+							<img src="img/icon3.jpg" class="rounded">
+						</div>
+					</div>
+					<!-- 星享俱乐部 -->
+					<div class="row bg-white">
+						<div class=" m-auto w-60  h247">
+							<div class="row">
+								<div class="col-sm-6 mt-5">
+									<h3>星享俱乐部</h3>
+									<p>开启您的星享之旅，星星越多、会员等级越高、好礼越丰富。<a href="#" class=" text-or">了解更多 ›</a></p>
+									<p> <a href="#" class="btn">注册</a>
+										<a href="#" class="btn">登录</a></p>
+								</div>
+								<div class="col-md-6  col-sm-img d-flex align-items-center ">
+									<img src="img/xin.svg">
+								</div>
+							</div>
+						</div>
+					</div>
+					<!-- 星巴克精选 -->
+					<div class="row bg-gray">
+						<div class="col-sm-12 text-center">
+							<h4 class="mt-4 ">星巴克精选 </h4>
+							<h5 class="mt-4 font-sm text-muted">在星巴克天猫旗舰店发现更多咖啡心意</h5>
+						</div>
+						<div class="col-lg-12 mt-5 mb-5">
+							<ul id="group" class="list-unstyled row  d-flex justify-content-around w-75 m-auto">
+								<li class="col-lg-2 col-sm-5 tupianbaba d-block bg-white h196 ml-3 text-center rounded">
+									<a href="#" class="a-reset w-100">
+										<img src="img/card1.png" class="tupian" height="72px" width="101px">
+										<h5 class="text-dark">会员星礼包</h5>
+										<h5 class="text-muted font-sm">星享卡新升级</h5>
+										<h5 class="text-muted font-sm">更多心意好礼</h5>
+										<a href="#" class="text-or">了解更多 ›</a>
+									</a>
+								</li>
+								<li class="col-lg-2 col-sm-5 d-block bg-white h196  ml-3  text-center rounded">
+									<a href="#" class="a-reset w-100">
+										<img src="img/card2.png" class="tupian" height="72px" width="101px">
+										<h5 class="text-dark">星礼卡</h5>
+										<h5 class="text-muted font-sm">用一份心礼</h5>
+										<h5 class="text-muted font-sm">让心意相随</h5>
+										<a href="#" class="text-or">了解更多 ›</a>
+									</a>
+								</li>
+								<li class="col-lg-2 col-sm-5 d-block bg-white h196  ml-3  text-center rounded">
+									<a href="#" class="a-reset w-100">
+										<img src="img/card3.png" class="tupian2" height="72px">
+										<h5 class="text-dark">电子产品劵</h5>
+										<h5 class="text-muted font-sm">心意</h5>
+										<h5 class="text-muted font-sm">从这一杯开始</h5>
+										<a href="#" class="text-or">了解更多 ›</a>
+									</a>
+								</li>
+								<li class="col-lg-2 col-sm-5 d-block bg-white h196  ml-3 text-center rounded">
+									<a href="#" class="a-reset w-100">
+										<img src="img/card4.png" class="tupian2" height="72px">
+										<h5 class="text-dark">咖啡生活</h5>
+										<h5 class="text-muted font-sm">星巴克</h5>
+										<h5 class="text-muted font-sm">用心制作</h5>
+										<a href="#" class="text-or">了解更多 ›</a>
+									</a>
+								</li>
+							</ul>
+						</div>
+					</div>
+					<!-- 1912 派克街 | 咖啡星讲堂 -->
+					<div class="row bg-white">
+						<div class="col-lg-12 text-center mt-5 mb-3">
+							<h4>1912 派克街 | 咖啡星讲堂</h4>
+							<h5 class="font-sm text-muted">了解更多星巴克咖啡文化</h5>
+						</div>
+						<div id="foot" class="col-lg-12 h255 text-center">
+							<div class="d-flex justify-content-around">
+								<div class="w-25 ml-3 rounded">
+									<img src="img/foot1.jpg" class="h-75 rounded">
+									<h5 class="mt-1">咖啡的起源与培植</h5>
+								</div>
+								<div class="w-25 ml-3 rounded">
+									<img src="img/foot2.jpg" class="h-75 rounded">
+									<h5 class="mt-1">咖啡调制</h5>
+								</div>
+								<div class="w-25  ml-3 rounded">
+									<img src="img/foot3.jpg" class="h-75 rounded">
+									<h5 class="mt-1">咖啡烘焙</h5>
+								</div>
+								<div class="w-25  ml-3 rounded">
+									<img src="img/foot4.jpg" class="h-75 rounded">
+									<h5 class="mt-1">手冲咖啡</h5>
+								</div>
+							</div>
+						</div>
+					</div>
+					<!-- 备案 -->
+					<div class="row ">
+						<div class="col-12 text-center">
+							<p class="text-muted"><img src="img/foot.png"> 沪公网安备 31010402000253号|沪ICP备17003747号</p>
+						</div>
+
+					</div>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>
